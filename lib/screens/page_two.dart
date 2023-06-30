@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:riel_money_v2/components/rate_currency_data.dart';
+import 'package:riel_money_v2/components/usd_to_any_two.dart';
 import 'package:riel_money_v2/functions/fetchrates.dart';
 import 'package:riel_money_v2/models/rates_model.dart';
 
@@ -53,15 +55,10 @@ class _PageTwoState extends State<PageTwo> {
                       return Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          UsdToAny(
+                          UsdToAnyTwo(
                             currencies: currSnapshot.data!,
                             rates: snapshot.data!.rates,
                           ),
-                          const SizedBox(
-                            height: 40,
-                          ),
-                          const Text('display of FX data'),
-                          const Text(''),
                         ],
                       );
                     }),

@@ -39,3 +39,9 @@ String convertany(Map exchangeRates, String amount, String currencybase,
 
   return output;
 }
+
+// String rawDataOutput(Map exchangeRates, String usd, String currency) {
+//   String rateValue = (exchangeRates[currency]).toString();
+//   String toCurrencyCode = exchangeRates.keys[currency].toString();
+//   return outputA;
+// }
