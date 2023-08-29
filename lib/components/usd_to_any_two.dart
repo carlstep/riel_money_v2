@@ -25,25 +25,25 @@ class _UsdToAnyTwoState extends State<UsdToAnyTwo> {
     return Card(
       child: Container(
         // width: w / 3,
-        padding: EdgeInsets.all(20),
+        padding: const EdgeInsets.all(20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text(
+            const Text(
               'USD to Any Currency TWO',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
 
             //TextFields for Entering USD
             TextFormField(
-              key: ValueKey('usd'),
+              key: const ValueKey('usd'),
               controller: usdController,
-              decoration: InputDecoration(hintText: 'Enter USD'),
+              decoration: const InputDecoration(hintText: 'Enter USD'),
               keyboardType: TextInputType.number,
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Row(
               children: [
                 //Future Builder for getting all currencies for dropdown list
@@ -74,7 +74,7 @@ class _UsdToAnyTwoState extends State<UsdToAnyTwo> {
                     }).toList(),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
 
@@ -91,26 +91,27 @@ class _UsdToAnyTwoState extends State<UsdToAnyTwo> {
                             dropdownValue;
                       });
                     },
-                    child: Text('Convert'),
+                    child: const Text('Convert'),
                     style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all(
                             Theme.of(context).primaryColor)),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
               ],
             ),
 
             //Final Output
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Container(child: Text(answer)),
-            SizedBox(height: 30),
-            Text('raw fx data'),
-            SizedBox(height: 10),
-            SingleChildScrollView(
+            const SizedBox(height: 30),
+            const Text('raw fx data'),
+            const SizedBox(height: 10),
+            const SingleChildScrollView(
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   // Text(rawDataOutput(
                   //     widget.rates, usdController.text, dropdownValue)),
